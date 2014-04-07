@@ -24,11 +24,11 @@ To use just add this to you config.ru
 ```ruby
 require 'rack-slow-log'
 
-use Rack::S4Logger
+use Rack::SlowLog
 ```
 or if you are using rails, add this to an initializer:
 ```ruby
-Rails::Application.config.middleware.use Rack::S4Logger
+Rails::Application.config.middleware.use Rack::SlowLog
 ```
 
 ## Configuration
@@ -37,7 +37,7 @@ You configure rack-slow-log like any other rack middleware:
 ```ruby
 require 'rack-slow-log'
 
-use Rack::S4Logger, { :long_request_time => 5 }
+use Rack::SlowLog, { :long_request_time => 5 }
 ```
 
 ### Available options:
